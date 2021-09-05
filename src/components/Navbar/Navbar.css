@@ -1,0 +1,137 @@
+.header--nav {
+  height: var(--nav-height);
+}
+
+.header--nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav--logo h2 {
+  font-size: clamp(2.5rem, 2rem + 1vw, 4rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.1em;
+}
+
+.header--nav.open .nav--logo h2 {
+  color: var(--white-900);
+  z-index: 1;
+}
+
+.nav--list {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-secondary);
+  padding: 15rem 1rem 5rem;
+  opacity: 0;
+  /* display: none; */
+  /* text-align: center; */
+}
+
+.header--nav.open .nav--list {
+  display: block;
+}
+
+.nav--list .nav--list__label {
+  color: var(--white-100);
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.nav--list__item {
+  overflow: hidden;
+}
+
+.nav--list__link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 6rem;
+  color: var(--white-900);
+  transition: 250ms;
+}
+
+.nav--list__link.active {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.nav--list__link:hover,
+.nav--list__link:focus {
+  color: var(--white-100);
+}
+
+.nav--toggler {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+}
+
+.header--nav.open .nav--toggler {
+  background: var(--bg-primary);
+}
+
+.nav--toggler__bar {
+  width: 100%;
+  height: 3px;
+  background: var(--bg-primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header--nav.open .nav--toggler__bar {
+  background: var(--bg-secondary);
+}
+
+.nav--contact {
+  margin-top: 5rem;
+}
+
+.nav--contact__label {
+  color: var(--white-100);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.nav--contact a {
+  font-size: 5rem;
+  margin-right: 2rem;
+  transition: 300ms;
+}
+
+.nav--contact a:hover {
+  opacity: 0.5 !important;
+}
+
+.nav--contact .twitter {
+  color: rgb(8, 164, 236);
+}
+
+.nav--contact .linkedin {
+  color: rgb(1, 1, 230);
+}
+
+.nav--contact .github {
+  color: white;
+}
+
+.nav--oglu {
+  position: fixed;
+  color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(10rem, 1rem + 40vw, 50rem);
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  opacity: 0.02;
+  line-height: 0.8em;
+  z-index: -1;
+}
