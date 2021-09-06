@@ -9,15 +9,16 @@
 .hero--text__hello {
   color: var(--black-100);
   font-size: clamp(1.6rem, 1rem + 1.4vw, 3rem);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.05em;
 }
 
 .hero--text h1 {
-  font-size: clamp(4rem, 1rem + 18vw, 20rem);
+  font-size: clamp(4rem, 1rem + 18vw, 20vmin);
   line-height: 1em;
   font-weight: 900;
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--black-500);
   letter-spacing: -0.04em;
   /* font-style: italic;
@@ -110,6 +111,7 @@
   .hero--email:hover,
   .hero--email:focus {
     color: rgb(36, 94, 255);
+    transform: translateY(5px);
   }
 
   .hero--contact-links {
