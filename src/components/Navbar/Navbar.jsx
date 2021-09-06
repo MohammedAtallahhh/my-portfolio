@@ -3,22 +3,29 @@ import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import "./Navbar.css";
 import { motion } from "framer-motion";
+import useScreenSize from "../Utils/useScreenSize";
 
 function Navbar() {
   const [navState, setNavState] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const screenWidth = useScreenSize().width;
+
+  useEffect(() => {
+    setNavState(navState && screenWidth < 768);
+    setIsMobile(screenWidth < 768);
+  }, [screenWidth]);
 
   const menuVariants = {
     hidden: {
       x: "100%",
       opacity: 0,
+      display: "none",
       transition: {
-        ease: "easeOut",
+        ease: "easeIn",
         type: "tween",
-        x: {
-          duration: 0.5,
-        },
-        opacity: {
-          duration: 0.35,
+        duration: 0.4,
+        display: {
+          delay: 0.4,
         },
       },
     },
@@ -29,12 +36,7 @@ function Navbar() {
         staggerChildren: 0.1,
         ease: "easeOut",
         type: "tween",
-        x: {
-          duration: 0.35,
-        },
-        opacity: {
-          duration: 0.2,
-        },
+        duration: 0.4,
       },
     },
   };
@@ -84,13 +86,14 @@ function Navbar() {
     },
   };
 
-  return (
+  return isMobile ? (
     <nav className={`header--nav ${navState ? "open" : ""}`}>
       <div className="container">
         <div className="nav--logo">
           <h2>OGLU.</h2>
         </div>
 
+        {/*------------ Navbar menu -------------*/}
         <motion.ul
           className={`nav--list`}
           variants={menuVariants}
@@ -99,33 +102,44 @@ function Navbar() {
           <motion.h4 className="nav--list__label" variants={labelVariants}>
             Menu
           </motion.h4>
+
+          {/* Item */}
           <li className="nav--list__item">
             <motion.a
-              href="#home"
+              href="#about"
               className="nav--list__link"
               variants={linkVariants}
+              onClick={() => setNavState(false)}
             >
-              Home
+              about
             </motion.a>
           </li>
+
+          {/* item */}
           <li className="nav--list__item">
             <motion.a
               href="#work"
               className="nav--list__link"
               variants={linkVariants}
+              onClick={() => setNavState(false)}
             >
               Work
             </motion.a>
           </li>
+
+          {/* item */}
           <li className="nav--list__item">
             <motion.a
               href="#contact"
               className="nav--list__link"
               variants={linkVariants}
+              onClick={() => setNavState(false)}
             >
               Contact
             </motion.a>
           </li>
+
+          {/* Contact links */}
           <div className="nav--contact">
             <motion.h4 className="nav--contact__label" variants={labelVariants}>
               Contact
@@ -140,21 +154,50 @@ function Navbar() {
               <FiGithub />
             </motion.a>
           </div>
+
+          {/* Oglu label */}
           <motion.div className="nav--oglu">Oglu</motion.div>
         </motion.ul>
 
+        {/*--------- Toggler --------*/}
         <button className="nav--toggler" onClick={() => setNavState(!navState)}>
           <motion.span
             className="nav--toggler__bar"
-            animate={navState ? { rotate: "45deg" } : { rotate: 0 }}
+            animate={navState ? { rotate: "45deg" } : { rotate: 0, y: "-50%" }}
             transition={{ duration: 0.2, type: "tween" }}
           ></motion.span>
           <motion.span
             className="nav--toggler__bar"
-            animate={navState ? { rotate: "-45deg" } : { rotate: 0 }}
+            animate={navState ? { rotate: "-45deg" } : { rotate: 0, y: "-50%" }}
             transition={{ duration: 0.2, type: "tween" }}
           ></motion.span>
         </button>
+      </div>
+    </nav>
+  ) : (
+    <nav className="header--nav">
+      <div className="container">
+        <div className="nav--logo">
+          <h2>OGLU.</h2>
+        </div>
+
+        <ul className="nav--list">
+          <li className="nav--list__item">
+            <a href="#about" className="nav--list__link">
+              About
+            </a>
+          </li>
+          <li className="nav--list__item">
+            <a href="#work" className="nav--list__link">
+              Work
+            </a>
+          </li>
+          <li className="nav--list__item">
+            <a href="#contact" className="nav--list__link">
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
