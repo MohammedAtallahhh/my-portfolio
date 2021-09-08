@@ -8,8 +8,13 @@
 }
 
 .hero--text__hello {
+<<<<<<< HEAD
   color: var(--text-primary-700);
   font-size: clamp(2rem, 1rem + 1.4vw, 3.4rem);
+=======
+  color: var(--black-100);
+  font-size: clamp(1.6rem, 1rem + 1.4vw, 3rem);
+>>>>>>> 70285d5e1ef82e2088a617a3c7fe21b3560e9558
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.07em;
@@ -21,7 +26,11 @@
   line-height: 1em;
   font-weight: 900;
   /* font-style: italic; */
+<<<<<<< HEAD
   color: var(--text-primary-700);
+=======
+  color: var(--black-500);
+>>>>>>> 70285d5e1ef82e2088a617a3c7fe21b3560e9558
   letter-spacing: -0.04em;
   /* font-style: italic;
   -webkit-text-fill-color: transparent;
