@@ -12,25 +12,36 @@
 html {
   font-size: 10px;
   /* Colors */
-  --black-100: hsl(0, 0%, 30%);
-  --black-300: hsl(0, 0%, 25%);
-  --black-500: hsl(0, 0%, 18%);
-  --black-700: hsl(0, 0%, 12%);
-  --black-800: hsl(0, 0%, 8%);
-  --black-900: hsl(0, 0%, 5%);
+  --black-900: hsl(0, 0%, 4%);
+  --black-800: hsl(0, 0%, 10%);
+  --black-700: hsl(0, 0%, 20%);
+  --black-500: hsl(0, 0%, 28%);
+  --black-300: hsl(0, 0%, 35%);
 
-  --white-100: hsl(0, 0%, 72%);
-  --white-300: hsl(0, 0%, 80%);
-  --white-500: hsl(0, 0%, 86%);
-  --white-700: hsl(0, 0%, 92%);
   --white-900: hsl(0, 0%, 98%);
+  --white-800: hsl(0, 0%, 90%);
+  --white-700: hsl(0, 0%, 82%);
 
-  /* Theme */
-  --bg-primary: var(--white-900);
-  --bg-secondary: var(--black-900);
+  /*--------- Light Theme --------*/
+  /* Text */
+  --text-primary-900: var(--black-900);
+  --text-primary-800: var(--black-800);
+  --text-primary-700: var(--black-700);
+  --text-primary-500: var(--black-500);
 
-  --text-primary: var(--black-900);
-  --text-secondary: var(--white-900);
+  --text-secondary-900: var(--white-900);
+  --text-secondary-800: var(--white-800);
+  --text-secondary-700: var(--white-700);
+  --text-secondary-300: var(--black-300);
+
+  /* background */
+  --bg-primary-900: var(--white-900);
+  --bg-primary-800: var(--white-800);
+  --bg-primary-700: var(--white-700);
+
+  --bg-secondary-900: var(--black-900);
+  --bg-secondary-800: var(--black-800);
+  --bg-secondary-700: var(--black-700);
 
   /* Spaces */
   --nav-height: 10vh;
@@ -39,7 +50,6 @@ html {
 @font-face {
   font-family: "Roboto Mono";
   src: url("fonts/RobotoMono.ttf");
-  /* font-weight: 100; */
 }
 
 body {
@@ -50,7 +60,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--white-900);
-  height: 300vh;
 }
 
 body.no-scroll {
@@ -62,11 +71,15 @@ body.nav-scrolled {
 }
 
 p {
-  line-height: 1.125em;
+  line-height: 1.5em;
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -89,4 +102,30 @@ ul {
   padding: 0 5%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(2, 97, 206);
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  display: inline-block;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: currentColor;
+  opacity: 0.5;
+  width: 100%;
+  height: 0.4em;
+  transition: 200ms;
+}
+
+.link:hover::after,
+.link:focus::after {
+  height: 100%;
 }

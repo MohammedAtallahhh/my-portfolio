@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import "./Navbar.css";
@@ -13,7 +13,7 @@ function Navbar() {
   useEffect(() => {
     setNavState(navState && screenWidth < 768);
     setIsMobile(screenWidth < 768);
-  }, [screenWidth]);
+  }, [screenWidth, navState]);
 
   const menuVariants = {
     hidden: {

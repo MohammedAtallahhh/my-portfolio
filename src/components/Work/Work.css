@@ -1,0 +1,78 @@
+.work {
+  background: hsl(220, 95%, 97%);
+  padding: 5rem 0;
+}
+
+.work--title .title {
+  font-size: clamp(4rem, 1rem + 15vw, 12rem);
+  line-height: 1em;
+  letter-spacing: -0.08em;
+  margin-bottom: 8rem;
+}
+
+.work--title .title span {
+  display: block;
+}
+
+.work--projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work--projects__project {
+  flex-basis: 100%;
+  margin-bottom: 7rem;
+  max-width: 420px;
+  cursor: pointer;
+}
+
+.project--image {
+  height: 320px;
+  overflow: hidden;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.project--image .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: hsl(220, 90%, 95%);
+}
+
+.project--image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.project--details {
+  padding: 1.5rem 0.5rem;
+}
+
+.project--details__name {
+  font-size: 1.8rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.project--details__description {
+  font-size: 1.4rem;
+  letter-spacing: -0.08em;
+  word-spacing: -0.2em;
+}
+
+@media (min-width: 700px) {
+  .work--projects {
+    justify-content: space-between;
+  }
+
+  .work--projects__project {
+    flex-basis: 46%;
+    max-width: 500px;
+  }
+
+  .work--projects__project:nth-child(n + 2) {
+    margin-top: 10rem;
+  }
+}

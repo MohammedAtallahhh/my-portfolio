@@ -12,32 +12,28 @@
 
 .nav--logo h2 {
   font-size: clamp(2.5rem, 2rem + 1vw, 4rem);
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.07em;
+  color: var(--text-primary-800);
+  transition: 250ms;
 }
 
 .header--nav.open .nav--logo h2 {
-  color: var(--white-900);
+  color: var(--text-secondary-800);
   z-index: 1;
 }
 
 .nav--list {
   position: fixed;
   inset: 0;
-  background: var(--bg-secondary);
+  background: var(--bg-secondary-900);
   padding: 15rem 1rem 5rem;
   opacity: 0;
   transform: translateX(100%);
   /* display: none; */
 }
 
-.header--nav.open .nav--list {
-  /* display: block; */
-}
-
 .nav--list .nav--list__label {
-  color: var(--white-100);
+  color: var(--text-secondary-300);
   font-size: 2.2rem;
   font-weight: 400;
 }
@@ -50,7 +46,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 6rem;
-  color: var(--white-900);
+  color: var(--text-secondary-900);
   transition: 250ms;
 }
 
@@ -61,24 +57,25 @@
 
 .nav--list__link:hover,
 .nav--list__link:focus {
-  color: var(--white-100);
+  color: var(--text-secondary-700);
+  padding-left: 0.2em;
 }
 
 .nav--toggler {
   width: 32px;
   height: 32px;
-  background: var(--bg-secondary);
+  background: var(--bg-secondary-800);
   cursor: pointer;
 }
 
 .header--nav.open .nav--toggler {
-  background: var(--bg-primary);
+  background: var(--bg-primary-800);
 }
 
 .nav--toggler__bar {
   width: 100%;
   height: 3px;
-  background: var(--bg-primary);
+  background: var(--bg-primary-800);
   position: absolute;
   left: 0;
   top: 50%;
@@ -86,7 +83,7 @@
 }
 
 .header--nav.open .nav--toggler__bar {
-  background: var(--bg-secondary);
+  background: var(--bg-secondary-800);
 }
 
 .nav--contact {
@@ -94,7 +91,7 @@
 }
 
 .nav--contact__label {
-  color: var(--white-100);
+  color: var(--text-secondary-300);
   font-size: 2.2rem;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -119,12 +116,12 @@
 }
 
 .nav--contact .github {
-  color: white;
+  color: var(--text-secondary-800);
 }
 
 .nav--oglu {
   position: fixed;
-  color: white;
+  color: var(--text-secondary-700);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -157,14 +154,15 @@
   }
 
   .nav--list__link {
-    color: var(--black-900);
+    color: var(--text-primary-500);
     font-size: 1.8rem;
     font-weight: 400;
-    padding: 0.5em;
+    padding: 0.5em 1.15em;
   }
 
   .nav--list__link:hover,
   .nav--list__link:focus {
-    color: var(--black-100);
+    background: var(--bg-primary-800);
+    color: var(--text-primary-900);
   }
 }

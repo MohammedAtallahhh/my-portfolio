@@ -4,7 +4,7 @@ import "./Hero.css";
 import { FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <main className="hero">
       <div className="hero--email">mohamedatallahh2017@gmail.com</div>
@@ -32,3 +32,5 @@ export const Hero = () => {
     </main>
   );
 };
+
+export default Hero;
