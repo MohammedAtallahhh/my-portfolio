@@ -48,8 +48,14 @@ html {
 }
 
 @font-face {
+<<<<<<< HEAD
   font-family: "Roboto Mono";
   src: url("fonts/RobotoMono.ttf");
+=======
+  font-family: "Roboto Mono 100";
+  src: url("fonts/RobotoMono.ttf");
+  /* font-weight: 100; */
+>>>>>>> 70285d5e1ef82e2088a617a3c7fe21b3560e9558
 }
 
 body {
