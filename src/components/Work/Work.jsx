@@ -4,6 +4,8 @@ import Manage from "./manage.png";
 import "./Work.css";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { FiGithub } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 const Work = () => {
   const [ref, inView] = useInView({
@@ -47,13 +49,31 @@ const Work = () => {
             <div className="project--details">
               <h3 className="project--details__name">Playspace clone</h3>
 
-              <p className="project--details__description">
-                This project is a clone to the{" "}
-                <a href="https://play.space" className="link">
-                  play space
-                </a>{" "}
-                website.
-              </p>
+              <div className="project--details__links">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/MohammedAtallahhh/playspace-clone"
+                  className="code"
+                >
+                  <FiGithub />
+                </a>
+
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://playspace-clone.netlify.app/"
+                  className="demo"
+                >
+                  <FiExternalLink />
+                </a>
+              </div>
+
+              <div className="project--details__tags">
+                <span className="react">React</span>{" "}
+                <span className="styled-components">styled-components</span>{" "}
+                <span className="framer-motion">framer-motion</span>
+              </div>
             </div>
           </div>
 
@@ -71,9 +91,31 @@ const Work = () => {
             <div className="project--details">
               <h3 className="project--details__name">Manage langing page</h3>
 
-              <p className="project--details__description">
-                This website is a challenge on frontend mentor website.
-              </p>
+              <div className="project--details__links">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://github.com/MohammedAtallahhh/manage-landing-page"
+                  className="code"
+                >
+                  <FiGithub />
+                </a>
+
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://manage2.netlify.app/"
+                  className="demo"
+                >
+                  <FiExternalLink />
+                </a>
+              </div>
+
+              <div className="project--details__tags">
+                <span className="html">HTML</span>{" "}
+                <span className="css">CSS</span>{" "}
+                <span className="javascript">Javascript</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,16 @@
+.about {
+  padding: 10rem 0;
+}
+
+.about--text {
+  text-align: center;
+}
+
+.about--text h2 {
+  color: var(--text-primary-700);
+  font-size: clamp(2rem, 1rem + 5vw, 8rem);
+  line-height: 1.4em;
+  letter-spacing: -0.07em;
+  word-spacing: -0.2em;
+  margin-bottom: 4rem;
+}

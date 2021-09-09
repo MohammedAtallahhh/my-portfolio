@@ -155,14 +155,16 @@
 
   .nav--list__link {
     color: var(--text-primary-500);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    padding: 0.5em 1.15em;
+    padding: 0.5em 0.8em;
+    margin-right: 0.3em;
   }
 
   .nav--list__link:hover,
   .nav--list__link:focus {
     background: var(--bg-primary-800);
     color: var(--text-primary-900);
+    padding: 0.5em 0.8em;
   }
 }

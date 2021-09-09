@@ -26,7 +26,7 @@ const Hero = () => {
           <h1 className="hero--text__Atallah">Atallah</h1>
           <h2 className="hero--text__title">Front-end Web developer.</h2>
 
-          <button className="hero--text__cta">let's talk</button>
+          <button className="btn hero--text__cta">let's talk</button>
         </div>
       </div>
     </main>
