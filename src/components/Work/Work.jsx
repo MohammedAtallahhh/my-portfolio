@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { FiExternalLink } from "react-icons/fi";
+import { projects } from "../../Projects";
 
 const Work = () => {
   const [ref, inView] = useInView({
@@ -13,13 +14,6 @@ const Work = () => {
     triggerOnce: true,
   });
 
-  const [ref2, inView2] = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
-  console.log(useInView());
-  console.log(inView);
   return (
     <section className="work">
       <div className="container">
@@ -31,54 +25,55 @@ const Work = () => {
         </div>
 
         <div className="work--projects">
-          {/* Project */}
-          <div className="work--projects__project">
-            <motion.div
-              ref={ref}
-              className={`project--image ${inView ? "active" : ""}`}
-            >
+          {projects.map(({ name, img, tags, codeLink, demoLink }) => (
+            <div className="work--projects__project">
               <motion.div
-                className="overlay"
-                animate={inView ? { height: 0 } : {}}
-                transition={{ duration: 0.6 }}
-              />
+                ref={ref}
+                className={`project--image ${inView ? "active" : ""}`}
+              >
+                <motion.div
+                  className="overlay"
+                  animate={inView ? { height: 0 } : {}}
+                  transition={{ duration: 0.6 }}
+                />
 
-              <motion.img src={Playspace} alt="playspace clone project" />
-            </motion.div>
+                <motion.img src={img} alt="playspace clone project" />
+              </motion.div>
 
-            <div className="project--details">
-              <h3 className="project--details__name">Playspace clone</h3>
+              <div className="project--details">
+                <h3 className="project--details__name">{name}</h3>
 
-              <div className="project--details__links">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/MohammedAtallahhh/playspace-clone"
-                  className="code"
-                >
-                  <FiGithub />
-                </a>
+                <div className="project--details__links">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={codeLink}
+                    className="code"
+                  >
+                    <FiGithub />
+                  </a>
 
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://playspace-clone.netlify.app/"
-                  className="demo"
-                >
-                  <FiExternalLink />
-                </a>
-              </div>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href={demoLink}
+                    className="demo"
+                  >
+                    <FiExternalLink />
+                  </a>
+                </div>
 
-              <div className="project--details__tags">
-                <span className="react">React</span>{" "}
-                <span className="styled-components">styled-components</span>{" "}
-                <span className="framer-motion">framer-motion</span>
+                <div className="project--details__tags">
+                  {tags.map((tag) => (
+                    <span className={tag}>{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
 
           {/* Project */}
-          <div ref={ref2} className="work--projects__project">
+          {/* <div ref={ref2} className="work--projects__project">
             <div className="project--image">
               <motion.div
                 className="overlay"
@@ -117,7 +112,7 @@ const Work = () => {
                 <span className="javascript">Javascript</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

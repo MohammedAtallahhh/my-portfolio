@@ -6,11 +6,12 @@ const About = () => {
     <section className="about">
       <div className="container">
         <div className="about--text">
-          <h2>
+          <h2 className="about--text__title">About me.</h2>
+          <p className="about--text__info">
             I love building websites that are responsive, accessible and more
             importantly user-friendly.
-          </h2>
-          <button className="btn about--text__cta">About me</button>
+          </p>
+          <button className="btn about--text__cta">More About Me</button>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <main className="hero">
       <div className="hero--email">mohamedatallahh2017@gmail.com</div>
-      <div className="hero--contact-links">
+      {/* <div className="hero--contact-links">
         <a href="#a" className="twitter">
           <FaTwitter />
         </a>
@@ -18,7 +18,7 @@ const Hero = () => {
         <a href="#a" className="github">
           <FiGithub />
         </a>
-      </div>
+      </div> */}
       <div className="container">
         <div className="hero--text">
           <h2 className="hero--text__hello">Hello, I am</h2>

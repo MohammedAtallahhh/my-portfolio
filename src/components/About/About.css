@@ -6,11 +6,21 @@
   text-align: center;
 }
 
-.about--text h2 {
-  color: var(--text-primary-700);
-  font-size: clamp(2rem, 1rem + 5vw, 8rem);
+.about--text__title {
+  color: var(--text-primary-900);
+  font-size: clamp(2rem, 1rem + 5vw, 7rem);
   line-height: 1.4em;
   letter-spacing: -0.07em;
   word-spacing: -0.2em;
   margin-bottom: 4rem;
+}
+
+.about--text__info {
+  font-size: clamp(1.6rem, 1rem + 3vw, 5rem);
+  line-height: 1.4em;
+  margin-bottom: 4rem;
+  font-family: Poppins;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  color: var(--text-primary-700);
 }
