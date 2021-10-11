@@ -1,0 +1,50 @@
+.contact {
+  background: hsl(128, 100%, 95%);
+  padding: 5rem 0;
+  box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.07),
+    inset 0 0.5rem 0.2rem rgba(0, 0, 0, 0.07);
+}
+
+.contact--title {
+  font-size: clamp(4rem, 1rem + 9vw, 10rem);
+  line-height: 1em;
+  word-spacing: -0.3em;
+  letter-spacing: -0.08em;
+  margin-bottom: 5rem;
+}
+
+/* .contact--title span {
+  font-size: 0.65em;
+  margin-right: 0.2em;
+  color: hsl(210, 79%, 46%);
+} */
+
+.contact--contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__links--item {
+  margin-right: 3rem;
+  width: clamp(8rem, 1rem + 14vw, 12rem);
+  height: clamp(8rem, 1rem + 14vw, 12rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0.2em 0.4em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.contact__links--link svg {
+  font-size: clamp(5rem, 1rem + 10vw, 8rem);
+  display: block;
+}
+
+.contact__links--link.github {
+  color: #000;
+}
+
+.contact__links--link.linkedin {
+  color: hsl(210, 79%, 46%);
+}

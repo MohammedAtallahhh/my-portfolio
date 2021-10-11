@@ -108,7 +108,7 @@
 }
 
 .nav--contact .twitter {
-  color: rgb(8, 164, 236);
+  /* color: rgb(8, 164, 236); */
 }
 
 .nav--contact .linkedin {
@@ -157,14 +157,23 @@
     color: var(--text-primary-500);
     font-size: 1.6rem;
     font-weight: 400;
-    padding: 0.5em 0.8em;
-    margin-right: 0.3em;
+    padding: 0.5em 1.4em;
   }
 
   .nav--list__link:hover,
   .nav--list__link:focus {
     background: var(--bg-primary-800);
     color: var(--text-primary-900);
-    padding: 0.5em 0.8em;
+    padding: 0.5em 1.4em;
+  }
+
+  .nav--list__link span {
+    position: absolute;
+    top: 1rem;
+  }
+
+  .nav--list__link span svg {
+    height: 1.2em;
+    width: 1.2em;
   }
 }

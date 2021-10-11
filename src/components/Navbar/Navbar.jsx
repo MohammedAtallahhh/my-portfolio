@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
+import { FcGoogle } from "react-icons/fc";
+import { RiArrowDownSLine } from "react-icons/ri";
 import "./Navbar.css";
 import { motion } from "framer-motion";
 import useScreenSize from "../Utils/useScreenSize";
@@ -111,7 +113,7 @@ function Navbar() {
               variants={linkVariants}
               onClick={() => setNavState(false)}
             >
-              about
+              resume
             </motion.a>
           </li>
 
@@ -126,32 +128,34 @@ function Navbar() {
               Work
             </motion.a>
           </li>
-
-          {/* item */}
-          <li className="nav--list__item">
-            <motion.a
-              href="#contact"
-              className="nav--list__link"
-              variants={linkVariants}
-              onClick={() => setNavState(false)}
-            >
-              Contact
-            </motion.a>
-          </li>
-
           {/* Contact links */}
           <div className="nav--contact">
             <motion.h4 className="nav--contact__label" variants={labelVariants}>
               Contact
             </motion.h4>
-            <motion.a href="#a" className="twitter" variants={contactVariants}>
-              <FaTwitter />
-            </motion.a>
-            <motion.a href="#a" className="linkedin" variants={contactVariants}>
+
+            <motion.a
+              target="_blank"
+              href="https://www.linkedin.com/in/mohammad-atallah-86ba16215/"
+              className="linkedin"
+              variants={contactVariants}
+            >
               <FaLinkedinIn />
             </motion.a>
-            <motion.a href="#a" className="github" variants={contactVariants}>
+            <motion.a
+              target="_blank"
+              href="https://github.com/MohammedAtallahhh"
+              className="github"
+              variants={contactVariants}
+            >
               <FiGithub />
+            </motion.a>
+            <motion.a
+              href="mailto: mohamedatallahh2017@gmail.com"
+              className="google"
+              variants={contactVariants}
+            >
+              <FcGoogle />
             </motion.a>
           </div>
 
@@ -184,7 +188,7 @@ function Navbar() {
         <ul className="nav--list">
           <li className="nav--list__item">
             <a href="#about" className="nav--list__link">
-              About
+              resume
             </a>
           </li>
           <li className="nav--list__item">
@@ -195,6 +199,9 @@ function Navbar() {
           <li className="nav--list__item">
             <a href="#contact" className="nav--list__link">
               Contact
+              <span>
+                <RiArrowDownSLine />
+              </span>
             </a>
           </li>
         </ul>

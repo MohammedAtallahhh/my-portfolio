@@ -22,8 +22,10 @@ const Hero = () => {
       <div className="container">
         <div className="hero--text">
           <h2 className="hero--text__hello">Hello, I am</h2>
-          <h1 className="hero--text__mohammed">Mohammed</h1>
-          <h1 className="hero--text__Atallah">Atallah</h1>
+          <h1 className="hero--text__name">
+            <span>Mohammed</span>
+            <span>Atallah</span>
+          </h1>
           <h2 className="hero--text__title">Front-end Web developer.</h2>
 
           <button className="btn hero--text__cta">let's talk</button>

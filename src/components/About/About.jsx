@@ -11,7 +11,7 @@ const About = () => {
             I love building websites that are responsive, accessible and more
             importantly user-friendly.
           </p>
-          <button className="btn about--text__cta">More About Me</button>
+          <button className="btn about--text__cta">Resume</button>
         </div>
       </div>
     </section>

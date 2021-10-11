@@ -16,11 +16,12 @@
 }
 
 .about--text__info {
-  font-size: clamp(1.6rem, 1rem + 3vw, 5rem);
+  font-size: clamp(1.6rem, 1rem + 5vw, 5.5rem);
+  letter-spacing: -0.08em;
+  word-spacing: -0.1em;
   line-height: 1.4em;
   margin-bottom: 4rem;
-  font-family: Poppins;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 4rem;
   color: var(--text-primary-700);
 }
